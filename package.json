@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:start": "node app.js",
-    "dev": "npm i --save",
+    "dev:start": "",
+    "dev": "npm i --save && node app.js",
     "build": ""
   },
   "author": "",
