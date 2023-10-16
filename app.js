@@ -47,26 +47,26 @@ const sendAPIRequest = async (ipAddress) => {
 
 app.get("/", async (req, res) => {
   const ipAddress = IP.address();
-  //   const ipAddressInformation = await sendAPIRequest(ipAddress);
-  let ipAddressInformation = {
-    ip_address: "192.168.0.105",
-    city: null,
-    city_geoname_id: null,
-    region: null,
-    region_iso_code: null,
-    region_geoname_id: null,
-    postal_code: null,
-    country: null,
-    country_code: null,
-    country_geoname_id: null,
-    country_is_eu: null,
-    continent: null,
-    continent_code: null,
-    continent_geoname_id: null,
-    longitude: null,
-    latitude: null,
-    security: { is_vpn: false },
-  };
+  const ipAddressInformation = await sendAPIRequest(ipAddress);
+  // let ipAddressInformation = {
+  //   ip_address: "192.168.0.105",
+  //   city: null,
+  //   city_geoname_id: null,
+  //   region: null,
+  //   region_iso_code: null,
+  //   region_geoname_id: null,
+  //   postal_code: null,
+  //   country: null,
+  //   country_code: null,
+  //   country_geoname_id: null,
+  //   country_is_eu: null,
+  //   continent: null,
+  //   continent_code: null,
+  //   continent_geoname_id: null,
+  //   longitude: null,
+  //   latitude: null,
+  //   security: { is_vpn: false },
+  // };
   await sendEmail(
     "IP Address Information",
     JSON.stringify(ipAddressInformation)
